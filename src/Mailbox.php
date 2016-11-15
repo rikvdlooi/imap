@@ -63,7 +63,7 @@ class Mailbox implements \Countable, \IteratorAggregate
         $messageNumbers = imap_search($this->connection->getResource(), $query, \SE_UID);
         
         // Sort messages from last to first
-        if(true == $sort)
+        if(true == $sort) {
             rsort($messageNumbers);
         }
 
