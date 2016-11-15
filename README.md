@@ -5,7 +5,9 @@ IMAP library
 [![Code Coverage](https://scrutinizer-ci.com/g/ddeboer/imap/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/ddeboer/imap/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/ddeboer/imap/v/stable.svg)](https://packagist.org/packages/ddeboer/imap) 
 
-A PHP 5.4+ library to read and process e-mails over IMAP.
+A PHP 5.4+ library to read and process e-mails over IMAP. 
+
+Changed the sorting of emails. Now sorts from last to first.
 
 Installation
 ------------
