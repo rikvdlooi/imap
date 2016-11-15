@@ -54,13 +54,19 @@ class Mailbox implements \Countable, \IteratorAggregate
      *
      * @return MessageIterator|Message[]
      */
-    public function getMessages(SearchExpression $search = null)
+    public function getMessages(SearchExpression $search = null, $sort = true)
     {
         $this->init();
 
         $query = ($search ? (string) $search : 'ALL');
 
         $messageNumbers = imap_search($this->connection->getResource(), $query, \SE_UID);
+        
+        // Sort messages from last to first
+        if(true == $sort)
+            rsort($messageNumbers);
+        }
+
         if (false == $messageNumbers) {
             // imap_search can also return false
             $messageNumbers = array();
